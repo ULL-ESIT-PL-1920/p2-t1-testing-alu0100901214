@@ -28,7 +28,7 @@ Esto nos creara una carpeta cache con todos los archivos rdf.
 
 - Uno de los primeros ficheros fuente que necesitaremos sera el package.json, lo inicializaremos con el siguiente código: 
 
-![ini](./img2/packageJsonInicial.PNG)
+![ini](./img2/packageJsonInicial.png)
 
 - Instalamos chai para realizar los expect y mocha para los test y seguir la metodología TDD dentro de '/database':
 
@@ -38,7 +38,7 @@ Esto nos creara una carpeta cache con todos los archivos rdf.
   
 - Añadimos una 'scripts' del package.json con lo siguiente:
 
-![scriptMocha](./img2/scriptMocha.PNG)
+![scriptMocha](./img2/scriptMocha.png)
 
 - Ahora la entrada de los test invocaran a mocha.
 
@@ -47,17 +47,17 @@ Esto nos creara una carpeta cache con todos los archivos rdf.
 - Primero crearemos la carpeta de '/test' con #mkdir y inicializamos dentro el archivo parse-rdf-test.js .
 - Dentro de parse-rdf-test.js añadimos lo siguiente:
 
-![function](./img2/function.PNG)
+![function](./img2/function.png)
 
 - Ahora podemos ver que dicho test nos falla, puesto que no hemos definido la función parseRDF correctamente: 
 
 #npm test
 
-![failed](./img2/failed.PNG)
+![failed](./img2/failed.png)
 
 - Creamos la carpeta '/lib' y inicializamos el fichero 'parse-rdf.js' donde declararemos los objetos necesarios para que nuestro test funcione correctamente:
 
-![lib](./img2/lib.PNG)
+![lib](./img2/lib.png)
 
 - Realizando #npm test una vez mas, comprobaremos que nuestras expectativas funcionan correctamente:
 
@@ -69,7 +69,7 @@ Esto nos creara una carpeta cache con todos los archivos rdf.
 
 - Para ello añadiremos otro script en el archivo package.json con lo siguiente:
 
-![test-watch](./img2/test-watch.PNG)
+![test-watch](./img2/test-watch.png)
 
 - Ahora tan solo tendremos que ejecutar en una terminal aparte #npm run test:watch y se ejecutara automáticamente #npm test cada vez que modifiquemos un archivo.
 
@@ -83,13 +83,13 @@ Esto nos creara una carpeta cache con todos los archivos rdf.
 
 - Modificamos el parse-rdf-test.js del /test para añadir un nuevo expect que detecte la id de un libro:
 
-![expect-id](./img2/expect-id.PNG)
+![expect-id](./img2/expect-id.png)
 
 - Nos fallara la terminal de Mocha ya que no tenemos implementado el codigo que incluya el 'id' del objeto 'book'.
 
 - Ahora en 'parse-rdf.js' de /lib añadimos el código necesario para poder identificar el id de un libro y formatearlo:
 
-![book-id](./img2/book-id.PNG)
+![book-id](./img2/book-id.png)
 
 - Una vez modificado, la terminal de Mocha deberia decirnos que los test funcionan correctamente.
 
@@ -99,23 +99,23 @@ Esto nos creara una carpeta cache con todos los archivos rdf.
 
 - Primero añadiremos en la sección de scripts del package.json lo siguiente:
 
-![test-debug](./img2/test-debug.PNG)
+![test-debug](./img2/test-debug.png)
 
 - Ahora ejecutamos el comando #npm run test:debug
 
 - Abrimos chrome y entramos en la URL especial  'chrome://inspect' y nos aparecera en la página de dispositivos de Chrome DevTools:
 
-![chromeDebugger](./img2/chromeDebugger.PNG)
+![chromeDebugger](./img2/chromeDebugger.png)
 
 - En Remote Target, seleccionamos el link azul 'inspect'
 
 - Y nos abrira los Devtools:
 
-![DevTools](./img2/DevTools.PNG)
+![DevTools](./img2/DevTools.png)
 
 - Aqui podemos ir a la sección de 'Sources', abrir algun archivo y establecer breakpoints:
 
-![breakpoint1](./img2/breakpoint1.PNG)
+![breakpoint1](./img2/breakpoint1.png)
 
 - Como Mocha esta ejecutando continuamente los tests, cada vez que cambie el fichero, ejecutara los test mirando los breakpoints.
 
