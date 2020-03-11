@@ -13,6 +13,9 @@ describe('parseRDF', () => {
 	it('should parse RDF content', () => {
 		const book = parseRDF(rdf);
 		expect(book).to.be.an('object');
+		expect(book).to.have.a.property('id',132);
 	});
 	
+
+
 });
